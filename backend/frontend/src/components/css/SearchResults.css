@@ -1,0 +1,141 @@
+.searchResultBox {
+	width: 250px;
+	height: 250px;
+	color: whitesmoke;
+	border-radius: 8px;
+	border: 1px solid rgb(0, 170, 85);
+	background-image: linear-gradient(to right, rgb(0, 170, 85), rgb(0, 130, 85));
+	margin: 20px;
+	box-shadow: 2px 3px 10px 1px rgba(0, 171, 86, 0.363);
+}
+
+.searchResultBox:hover {
+	background-image: linear-gradient(to right, rgb(1, 136, 68), rgb(0, 105, 68));
+	border: 1px solid rgb(1, 148, 74);
+	box-shadow: none;
+}
+
+.searchResultTrackName {
+	margin: 20px;
+	font-size: 20px;
+}
+
+.searchResultArtist {
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+.searchResultGenre {
+	font-size: 15px;
+}
+
+.trackInfo {
+	/* ensures that the radio button (favourite button) will be in a fixed position */
+	max-height: 180px !important;
+	min-height: 180px;
+	/* removes the blue colour that is applied to linked text */
+	color: whitesmoke;
+}
+
+/* removes the default blue underline applied to link elements */
+a {
+	text-decoration: none !important;
+}
+
+/* removes the default bullet points and padding applied to listed items */
+/* applies to both the search results list and the favourites list */
+ul {
+	list-style-type: none;
+	padding: 0 !important;
+}
+
+/* displays the search results in a horizontal order */
+.listedSearchResultsDiv ul li {
+	display: inline-block;
+}
+
+/* animated loading icon styling: */
+
+/* centers the loading icon */
+.loadingIconDiv {
+	margin: 0;
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader {
+	width: 20em;
+	height: 20em;
+	font-size: 10px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader .face {
+	position: absolute;
+	border-radius: 50%;
+	border-style: solid;
+	animation: animate 3s linear infinite;
+}
+
+.loader .face:nth-child(1) {
+	width: 100%;
+	height: 100%;
+	color: rgb(0, 170, 85);
+	border-color: currentColor transparent transparent currentColor;
+	border-width: 0.2em 0.2em 0em 0em;
+	--deg: -45deg;
+	animation-direction: normal;
+}
+
+.loader .face:nth-child(2) {
+	width: 70%;
+	height: 70%;
+	color: rgb(0, 170, 85);
+	border-color: currentColor currentColor transparent transparent;
+	border-width: 0.2em 0em 0em 0.2em;
+	--deg: -135deg;
+	animation-direction: reverse;
+}
+
+.loader .face .circle {
+	position: absolute;
+	width: 50%;
+	height: 0.1em;
+	top: 50%;
+	left: 50%;
+	background-color: transparent;
+	transform: rotate(var(--deg));
+	transform-origin: left;
+}
+
+.loader .face .circle::before {
+	position: absolute;
+	top: -0.5em;
+	right: -0.5em;
+	content: "";
+	width: 1em;
+	height: 1em;
+	background-color: currentColor;
+	border-radius: 50%;
+	box-shadow: 0 0 2em, 0 0 4em, 0 0 6em, 0 0 8em, 0 0 10em,
+		0 0 0 0.5em rgba(0, 170, 85, 0.1);
+}
+
+@keyframes animate {
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+/* references: 
+
+https://stackoverflow.com/questions/8641251/how-do-i-center-list-items-inside-a-ul-element 
+
+https://codepen.io/comehope/pen/YLRLaM 
+
+*/
