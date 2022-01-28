@@ -1,0 +1,8 @@
+.appBar {
+	background-image: linear-gradient(to right, rgb(0, 170, 85), rgb(0, 130, 85));
+}
+
+.typography,
+.menuIcon {
+	color: whitesmoke;
+}

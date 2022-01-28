@@ -1,0 +1,41 @@
+.searchBar {
+	/* search bar width is dependant on the width of the user's screen */
+	width: 40% !important;
+	/* centers the search bar */
+	margin: auto;
+}
+
+/* used !important to overwrite bootstrap config */
+.searchButton {
+	background: rgb(0, 170, 85) !important;
+	border: 1px solid rgb(0, 170, 85) !important;
+	border-radius: 8px !important;
+	box-shadow: 2px 3px 10px 1px rgba(0, 170, 85, 0.363) !important;
+}
+
+.searchButton:hover {
+	background: rgb(1, 148, 74) !important;
+	border: 1px solid rgb(1, 148, 74) !important;
+	box-shadow: none !important;
+}
+
+.filterSearchBox {
+	margin: 0 auto;
+	width: 60%;
+	padding: 10px;
+	background-image: linear-gradient(to right, rgb(0, 170, 85), rgb(0, 130, 85));
+	border: 1px solid rgb(0, 170, 85);
+	border-radius: 10px;
+	color: whitesmoke;
+}
+
+.filterHeading {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/* references:
+
+https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+
+*/
