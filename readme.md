@@ -74,5 +74,5 @@ Applied Helmet security to the Express app.
 This application has not made use of API keys. I could not find information about the use of API keys on the iTunes Store API documentation page.
 
 ---
-### Deployed App - 
+### Deployed App - https://media-search-application.herokuapp.com/
 ---
